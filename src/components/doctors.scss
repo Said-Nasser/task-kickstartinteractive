@@ -1,0 +1,64 @@
+@import "base";
+
+section#doctors {
+    color: #000;
+    background: #fff;
+    padding: 3rem 1.5rem;
+
+    header {
+        text-align: center;
+        color: $blue;
+    }
+    main {
+        max-width: 1200px;
+        article {
+            text-align: center;
+            img {
+                border-radius: 50%;
+                border: 1px solid rgba($color: $grey, $alpha: 0.4);
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            background: $blue;
+            &::after {
+                font-size: 1rem;
+            }
+            &.swiper-button-disabled {
+                background: $grey;
+            }
+        }
+        .swiper-pagination {
+            display: block;
+        }
+        .swiper-wrapper {
+            padding-bottom: 1.5rem;
+        }
+    }
+}
+
+// media
+@media (min-width: 576px) {
+    section#doctors {
+        padding: 3rem 3.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    section#doctors {
+        main {
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: flex;
+            }
+            .swiper-pagination {
+                display: none;
+            }
+        }
+    }
+}

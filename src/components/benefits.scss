@@ -1,0 +1,61 @@
+@import "base";
+
+section#benefits {
+    color: #fff;
+    padding: 0.5rem 0.5rem;
+    position: relative;
+    background: $blue;
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0px;
+        width: 30%;
+        height: 4px;
+        background: $pink;
+    }
+    &::after {
+        left: 0;
+        top: 100%;
+    }
+    header {
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    main.benefits-cards {
+        display: flex;
+        justify-content: space-around;
+        article {
+            flex: 0 0 $col-3;
+            text-align: center;
+            .icon {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 0.55rem;
+            }
+        }
+    }
+}
+
+// media
+@media (min-width: 576px) {
+    section#benefits {
+        padding: 1.5rem 2.5rem;
+        header {
+            font-size: 1rem;
+        }
+        main.benefits-cards {
+            article {
+                .icon {
+                    font-size: 3.5rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
